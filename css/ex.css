@@ -1,0 +1,85 @@
+@charset "utf-8";
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* btn ex */
+.btn-download {
+  margin: 80px;
+  padding: 10px 20px;
+  background-color: #fff;
+  border-radius: 7px;
+}
+.btn-download::before {
+  content: "🤍";
+}
+.btn-download::after {
+  content: "🤍";
+}
+/* 말풍선 꼬리 */
+.tooltip {
+  position: relative;
+  text-align: center;
+  width: 100px;
+  border-radius: 7px;
+  background-color: #333;
+  padding: 10px;
+  color: #fff;
+}
+.tooltip::after {
+  content: "";
+  border: 8px solid transparent;
+  position: absolute;
+  top: 100%;
+  left: 42px;
+  border-top-color: #333;
+}
+/* 구분선텍스트 */
+.divider {
+  padding: 20px;
+  margin-top: 50px;
+  text-align: center;
+  background-color: #eee;
+}
+.divider::before,
+.divider::after {
+  content: "";
+  display: inline-block;
+  width: 10%;
+  height: 1px;
+  background-color: #aaa;
+  vertical-align: middle;
+}
+.divider::before {
+  margin-right: 10px;
+}
+.divider::after {
+  margin-left: 10px;
+}
+/* 메뉴구분선 */
+.menu{
+    background-color: #eee;
+    padding: 15px;
+    display: flex;
+}
+.menu a{
+    padding: 5px;
+    color: #333;
+    text-decoration: none;
+    position: relative;
+}
+.menu a::after{
+    position: absolute;
+    top: 50%;
+    right: -35%;
+    content: "";
+    width: 1px;
+    height: 15px;
+    background-color: #333;
+    display: inline-block;
+    transform: translateY(-40%);
+}
+.menu a:last-child::after{
+    content: none;
+}

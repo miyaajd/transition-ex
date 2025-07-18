@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>가상요소 선택자</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      p {
+        background-color: #ccc;
+      }
+      .box {
+        background-color: #ddd;
+      }
+      .box::before {
+        content: "👀";
+        display: block;
+      }
+      .box::after {
+        content: "🎁";
+        display: block;
+      }
+      .box2 {
+        background-color: #aaa;
+      }
+      .box2::before {
+        display: block;
+        content: "<before>";
+            color: #333;
+            background-color: #eee;
+      }
+      .box2::after{
+        content: "🍵🍵";
+        display: block;
+        background-color: #eee;
+      }
+    </style>
+  </head>
+  <body>
+    <span>🍟</span>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo labore
+      perspiciatis alias assumenda veritatis
+    </p>
+    <span>🥐</span>
+    <p class="box">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo labore
+      perspiciatis alias assumenda veritatis
+    </p>
+    <span>🍰</span>
+    <p class="box2">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo labore
+      perspiciatis alias assumenda veritatis
+    </p>
+  </body>
+</html>
