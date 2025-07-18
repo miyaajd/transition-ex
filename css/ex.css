@@ -11,6 +11,9 @@
   background-color: #fff;
   border-radius: 7px;
 }
+.btn-download:hover{
+    cursor: pointer;
+}
 .btn-download::before {
   content: "🤍";
 }
